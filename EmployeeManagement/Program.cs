@@ -1,7 +1,20 @@
+using Microsoft.SqlServer;
+using EmployeeManagement.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? "Server=(localdb)\\mssqllocaldb;Database=EmployeeManagementDb;Trusted_Connection=true;Encrypt=false;";
+
+//Register dbcontext
+builder.Services.AddDbContext<EmployeeDbContext>(options =>
+    options.UseSqlServer(connectionString)
+    .LogTo(Console.WriteLine, LogLevel.Information) // Development logging
+);
 
 var app = builder.Build();
 

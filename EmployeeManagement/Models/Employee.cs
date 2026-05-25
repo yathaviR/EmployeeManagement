@@ -14,8 +14,8 @@
 
         public decimal Salary { get; set; }
         public string Role { get; set; }
-        public string DepartmentID { get; set; }
-        public string? ManagerID { get; set; }
+        public int DepartmentID { get; set; }
+        public int? ManagerID { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }

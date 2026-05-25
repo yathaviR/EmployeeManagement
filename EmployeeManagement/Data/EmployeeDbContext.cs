@@ -51,9 +51,7 @@ namespace EmployeeManagement.Data
                 .HasMaxLength(100);
 
                 entity.Property(e => e.DepartmentID)
-                .IsRequired()
-                .HasColumnType("varchar(8)")
-                .HasMaxLength(8);
+                .IsRequired();
 
                 entity.Property(e => e.ManagerID)
                 .IsRequired(false);
