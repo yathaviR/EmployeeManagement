@@ -9,7 +9,7 @@
         public string EmployeeID { get; set; }
 
         public string Name { get; set; }
-        public DateOnly Dob { get; set; }
+        public DateTime Dob { get; set; }
         public string Email { get; set; }
 
         public decimal Salary { get; set; }
