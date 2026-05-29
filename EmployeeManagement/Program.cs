@@ -1,10 +1,20 @@
 using Microsoft.SqlServer;
 using EmployeeManagement.Data;
 using Microsoft.EntityFrameworkCore;
+using EmployeeManagement.Repositories;
+using EmployeeManagement.Interfaces;
+using EmployeeManagement.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+//Add Repositories
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 
 // Add services to the container.
+
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+
 builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")

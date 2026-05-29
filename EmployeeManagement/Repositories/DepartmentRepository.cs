@@ -5,7 +5,7 @@ using EmployeeManagement.Interfaces;
 
 namespace EmployeeManagement.Repositories
 {
-    public class DepartmentRepository : IDepartmentRespository
+    public class DepartmentRepository : IDepartmentRepository
     {
         private readonly EmployeeDbContext _context;
 
@@ -13,6 +13,7 @@ namespace EmployeeManagement.Repositories
         {
             _context = context;
         }
+
         public async Task<IEnumerable<Department>> GetAllAsync()
         {
             return await _context.Departments
