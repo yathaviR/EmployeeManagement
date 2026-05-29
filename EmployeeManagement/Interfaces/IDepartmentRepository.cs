@@ -1,7 +1,7 @@
 ﻿using EmployeeManagement.Models;
 namespace EmployeeManagement.Interfaces
 {
-    public interface IDepartmentRespository
+    public interface IDepartmentRepository
     {
         Task<IEnumerable<Department>> GetAllAsync();
         Task<Department?> GetByIdAsync(int id);
