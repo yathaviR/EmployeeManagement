@@ -7,8 +7,8 @@ A full-stack **Employee Management System** built with **.NET 9**, combining and
 ---
 
 ## Project Structure
-
-'''
+ 
+```
 EmployeeManagement/
 ├── Controllers/                    # MVC + API Controllers (in progress)
 ├── Data/
@@ -36,7 +36,7 @@ EmployeeManagement/
 ├── wwwroot/                        # Static files
 └── Program.cs                      # Entry point + DI registration
 ```
-
+ 
 ---
  
 ## Features
@@ -55,7 +55,7 @@ EmployeeManagement/
 - ✔ Dependency Injection registered in `Program.cs`
 ---
  
-## 🗄️ Data Models
+## Data Models
  
 ### Employee
  
@@ -210,7 +210,7 @@ Open browser → `https://localhost:5001`
  
 ---
  
-## 🌐 MVC Pages
+##  MVC Pages
  
 | URL                        | Description              |
 |----------------------------|--------------------------|
@@ -224,7 +224,7 @@ Open browser → `https://localhost:5001`
  
 ---
  
-## 🛠️ Tech Stack
+##  Tech Stack
  
 | Layer              | Technology                    |
 |--------------------|-------------------------------|
